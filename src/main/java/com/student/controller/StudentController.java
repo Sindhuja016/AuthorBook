@@ -29,10 +29,15 @@ public class StudentController {
 	public List<StudentDto> createUser(@RequestBody List<StudentDto> sdtos) {
 		return studentservice.createUser(sdtos);
 	}
+	
+	
 	@GetMapping("/getbyid/{id}")
 	public StudentDto getUserById(@PathVariable Integer id) {
 		return studentservice.getUserId(id);
 	}
+	
+	
+	
 	@GetMapping("/getbyname")
 	public StudentDto getUserByName(@RequestParam String name) {
 		return studentservice.getUserByName(name);
